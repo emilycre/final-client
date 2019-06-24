@@ -17,7 +17,7 @@ export const withFetch = (Component, LoadingComponent = DefaultLoader) => {
     render() {
       const { loading } = this.props;
       if(loading) return <LoadingComponent />;
-
+      
       <Component {...this.props} />;
     }
   }
