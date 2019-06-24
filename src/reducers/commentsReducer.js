@@ -14,7 +14,7 @@ const initialState = {
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
     case CREATE_COMMENT:
-      return { ...state, loading: false };
+      return { ...state, loading: false, list: [...state.list, payload] };
     case CREATE_COMMENT_PENDING:
       return { ...state, loading: true };
     case FETCH_COMMENTS:
