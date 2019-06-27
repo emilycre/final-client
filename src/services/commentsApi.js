@@ -20,3 +20,4 @@ const request = (path, method, body) => {
 
 export const postComment = comment => request('/api/v1/comments', 'POST', comment);
 export const getComments = id => request(`/api/v1/comments/${id}`, 'GET');
+//edit note -- put
