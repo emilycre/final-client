@@ -12,3 +12,9 @@ export const [
   FETCH_COMMENTS,
   FETCH_COMMENTS_PENDING
 ] = createAction('FETCH_COMMENTS', getComments);
+
+export const [
+  updateComment,
+  UPDATE_COMMENT,
+  UPDATE_COMMENT_PENDING
+] = createAction('UPDATE_COMMENT', updateComment);
