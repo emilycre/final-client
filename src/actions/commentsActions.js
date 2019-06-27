@@ -1,5 +1,10 @@
 import { createAction } from 'promise-middleware-redux';
-import { postComment, getComments } from '../services/commentsApi';
+import {
+  postComment,
+  getComments,
+  editComment,
+  deleteComment
+} from '../services/commentsApi';
 
 export const [
   createComment,
@@ -17,4 +22,9 @@ export const [
   updateComment,
   UPDATE_COMMENT,
   UPDATE_COMMENT_PENDING
-] = createAction('UPDATE_COMMENT', updateComment);
+] = createAction('UPDATE_COMMENT', editComment);
+
+export const [
+  trashComment,
+  DELETE_COMMENT
+] = createAction('DELETE_COMMENT', deleteComment);

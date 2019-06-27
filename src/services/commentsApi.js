@@ -20,4 +20,5 @@ const request = (path, method, body) => {
 
 export const postComment = comment => request('/api/v1/comments', 'POST', comment);
 export const getComments = id => request(`/api/v1/comments/${id}`, 'GET');
-export const updateComment = comment => request(`/api/v1/comments/${comment._id}`, 'PUT', comment);
+export const editComment = comment => request(`/api/v1/comments/${comment._id}`, 'PATCH', comment);
+export const deleteComment = id => request(`/api/v1/comments/${id}`, 'DELETE');

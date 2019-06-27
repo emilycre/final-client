@@ -4,7 +4,8 @@ import {
   FETCH_COMMENTS,
   FETCH_COMMENTS_PENDING,
   UPDATE_COMMENT,
-  UPDATE_COMMENT_PENDING
+  UPDATE_COMMENT_PENDING,
+  DELETE_COMMENT
 } from '../actions/commentsActions';
 
 const initialState = {
@@ -27,6 +28,8 @@ export default function reducer(state = initialState, { type, payload }) {
       return { ...state, loading: false, list: payload };
     case UPDATE_COMMENT_PENDING:
       return { ...state, loading: true };
+    case DELETE_COMMENT:
+      return state;
     default:
       return state;
   }
