@@ -1,6 +1,6 @@
-* Nothing is loading. We get the following error:
+<!-- * Nothing is loading. We get the following error:
   "Invariant Violation: WithFetch(...): Nothing was returned from render."
-  How do you fix this?
+  How do you fix this? -->
 
 * On the CharacterById page we get a warning:
   "The prop `loading` is marked as required in `WithFetch`, but its value is `undefined`."

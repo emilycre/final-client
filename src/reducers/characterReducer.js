@@ -2,7 +2,7 @@ import { FETCH_CHARACTER, FETCH_CHARACTER_PENDING } from '../actions/charactersA
 
 const initialState = {
   detail: {},
-  loading: true,
+  loading: false,
   error: null
 };
 

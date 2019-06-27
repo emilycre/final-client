@@ -6,8 +6,11 @@ const DefaultLoader = () => <h1>Loading!</h1>;
 export const withFetch = (Component, LoadingComponent = DefaultLoader) => {
   class WithFetch extends PureComponent {
     static propTypes = {
-      fetch: PropTypes.func.isRequired,
-      loading: PropTypes.bool.isRequired
+      fetch: PropTypes.func.isRequired
+    }
+
+    state = {
+      loading: false
     }
 
     componentDidMount() {
@@ -15,7 +18,7 @@ export const withFetch = (Component, LoadingComponent = DefaultLoader) => {
     }
 
     render() {
-      const { loading } = this.props;
+      const { loading } = this.state;
       if(loading) return <LoadingComponent />;
       
       return <Component {...this.props} />;
